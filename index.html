@@ -221,7 +221,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
       <option value="all">📊 All Months — Combined View</option>
       <option value="jul">📅 July 2026 (Jul 15 – Jul 31)</option>
       <option value="aug">📅 August 2026 (Aug 1 – Aug 31)</option>
-    <option value="sep" selected>📅 September 2026 (Sep 1 – Sep 30)</option>
+    <option value="sep">📅 September 2026 (Sep 1 – Sep 30)</option>
+    <option value="oct" selected>📅 October 2026 (Oct 1 – Oct 31)</option>
     </select>
   </div>
 </div>
@@ -242,7 +243,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
         <option value="all">📊 All Months</option>
         <option value="jul">📅 July 2026 (Jul 15 – Jul 31)</option>
       <option value="aug">📅 August 2026 (Aug 1 – Aug 31)</option>
-    <option value="sep" selected>📅 September 2026 (Sep 1 – Sep 30)</option>
+    <option value="sep">📅 September 2026 (Sep 1 – Sep 30)</option>
+    <option value="oct" selected>📅 October 2026 (Oct 1 – Oct 31)</option>
     </select>
     </div>
     <nav class="sidebar-nav">
@@ -280,7 +282,7 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
         </div>
         <div class="kpi-card">
           <div class="kpi-icon green"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
-          <div class="kpi-card-body"><div class="kpi-meta">New Followers</div><div class="kpi-value" id="kpiFol">—</div><div class="kpi-footer"><span class="kpi-tag green" id="kpiFolTag">Total: 20,083</span><div class="kpi-spark-wrap"><div class="kpi-spark-label" id="sl3">—</div><canvas id="spark3"></canvas></div></div></div>
+          <div class="kpi-card-body"><div class="kpi-meta">New Followers</div><div class="kpi-value" id="kpiFol">—</div><div class="kpi-footer"><span class="kpi-tag green" id="kpiFolTag">Total: 20,314</span><div class="kpi-spark-wrap"><div class="kpi-spark-label" id="sl3">—</div><canvas id="spark3"></canvas></div></div></div>
         </div>
       </div>
     </div>
@@ -289,8 +291,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
       <div class="hb-top">
         <div class="hb-left">
           <div class="hb-eyebrow">Total Followers</div>
-          <div class="hb-number">20,083</div>
-          <div class="hb-sub">As of <span id="followersAsOf">Sep 30, 2026</span></div>
+          <div class="hb-number">20,314</div>
+          <div class="hb-sub">As of <span id="followersAsOf">Oct 31, 2026</span></div>
         </div>
         <div class="hb-stats">
           <div class="hb-stat"><div class="hb-stat-label">Impressions</div><div class="hb-stat-val" id="bImp">—</div><div class="hb-stat-sub" id="bImpS">—</div></div>
@@ -346,6 +348,29 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 // DATA — injected by Claude when building
 // ═══════════════════════════════════════
 const MONTHS = {
+  oct: {
+    label: "October 2026",
+    range: "Oct 1 – Oct 31, 2026",
+    labels: ["10/1", "10/2", "10/3", "10/4", "10/5", "10/6", "10/7", "10/8", "10/9", "10/10", "10/11", "10/12", "10/13", "10/14", "10/15", "10/16", "10/17", "10/18", "10/19", "10/20", "10/21", "10/22", "10/23", "10/24", "10/25", "10/26", "10/27", "10/28", "10/29", "10/30", "10/31"],
+    impressions: [407, 363, 200, 216, 6392, 8765, 1475, 7714, 16942, 28894, 3644, 43282, 24217, 6387, 5168, 3269, 1273, 763, 400, 251, 259, 2874, 3493, 1789, 12832, 6548, 3094, 33220, 27715, 9739, 13354],
+    engagements: [6, 5, 2, 3, 27, 34, 11, 35, 24, 23, 7, 40, 32, 35, 34, 7, 7, 6, 2, 0, 0, 8, 36, 12, 81, 24, 19, 123, 69, 15, 20],
+    followers: [8, 3, 2, 9, 9, 25, 10, 14, 21, 18, 2, 17, 12, 14, 12, 12, 8, 2, 8, 8, 9, 11, 11, 7, 52, 38, 14, 32, 31, 8, 8],
+    totalImp: 274939, totalEng: 747, totalFol: 435,
+    peakDay: "Oct 12", peakVal: "43,282",
+    impTagClass: "amber", impTagText: "🔥 Strong month",
+    audience: {
+      locations: [{name:"Greater Delhi Area",pct:24.0},{name:"Greater Bengaluru Area",pct:17.0},{name:"Mumbai Metropolitan Region",pct:12.0},{name:"Greater Hyderabad Area",pct:3.0},{name:"San Francisco Bay Area",pct:3.0}],
+      seniority: [{name:"Senior",pct:33.0,color:"#6366F1"},{name:"Entry",pct:15.0,color:"#10B981"},{name:"Director",pct:9.0,color:"#F59E0B"},{name:"Owner",pct:8.0,color:"#EF4444"},{name:"Manager",pct:7.0,color:"#8B5CF6"}],
+      industries: [{name:"Financial Services",pct:11.0},{name:"Business Consulting and Services",pct:10.0},{name:"IT Services and IT Consulting",pct:10.0},{name:"Technology, Information and Internet",pct:10.0},{name:"Software Development",pct:7.0}]
+    },
+    posts: [
+      {title:"LinkedIn Post · Oct 28, 2026",date:"Oct 28, 2026",imp:"76,518",badge:"green",url:"https://www.linkedin.com/posts/kalraujwal_a-candy-startup-had-just-60-days-of-cash-share-7521212694813868032-qqWq"},
+      {title:"LinkedIn Post · Oct 12, 2026",date:"Oct 12, 2026",imp:"70,353",badge:"indigo",url:"https://www.linkedin.com/posts/kalraujwal_openai-profit-in-2015-0-openai-profit-in-share-7515101413861986304-6fe_"},
+      {title:"LinkedIn Post · Oct 7, 2026",date:"Oct 7, 2026",imp:"45,730",badge:"indigo",url:"https://www.linkedin.com/posts/kalraujwal_a-youtuber-launched-a-cereal-brand-at-target-share-7513477892329078785-jUa2"},
+      {title:"LinkedIn Post · Oct 23, 2026",date:"Oct 23, 2026",imp:"23,287",badge:"indigo",url:"https://www.linkedin.com/posts/kalraujwal_ipo-startup-share-7519404463942721537-q1Yx"},
+      {title:"LinkedIn Post · Oct 5, 2026",date:"Oct 5, 2026",imp:"15,048",badge:"indigo",url:"https://www.linkedin.com/posts/kalraujwal_what-most-people-dont-know-about-n-r-narayana-share-7512597835847213056-RTeU"}
+    ]
+  },
   sep: {
     label: "September 2026",
     range: "Sep 1 – Sep 30, 2026",
@@ -416,7 +441,7 @@ const MONTHS = {
     ]
   }
 };
-const DEFAULT_MONTH = 'sep';
+const DEFAULT_MONTH = 'oct';
 
 // ═══════════════════════════════════════
 // CHARTS
